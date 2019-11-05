@@ -64,7 +64,7 @@ public class ArrayOneDimensional {
         int[][] anotherTwoDimensionalArray1 = {
                 {1,2,3},
                 {4,5,6},
-                {7,8,9}
+                {9,8,7}
         };
         for(int m=0;m<3;m++){
             for(int n=0; n < 3; n++){
@@ -78,6 +78,22 @@ public class ArrayOneDimensional {
 
         int E = Arrays.binarySearch(anotherTwoDimensionalArray1[0],2);
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + E + " VALUE UNDER THIS INDEX IS = " + anotherTwoDimensionalArray1[0][E]);
-
+        //SORT (Arrays.sort())
+        Arrays.sort(anotherTwoDimensionalArray1[2],0,2);
+        System.out.println("SORTED ARRAY : ");
+        for(int m=0;m<3;m++){
+            for(int n=0; n < 3; n++){
+                System.out.print(anotherTwoDimensionalArray1[m][n] + " ");
+            }
+            System.out.println();
+        }
+        //ARRAY TO STRING
+        System.out.println("ARRAY TO STRING : " + Arrays.toString(anotherTwoDimensionalArray1[1]));
+        //COPY OF SOME ELEMENTS (JUST FIRST ELEMENS)
+        String[] copySeasons = Arrays.copyOf(seasons,2);
+        System.out.println(" COPY OF SOME ELEMENTS : " + Arrays.toString(copySeasons));
+        //COPY OF SOME ELEMENTS (MIDDLE ELEMENS)
+        copySeasons = Arrays.copyOfRange(seasons,0,2);
+        System.out.println(" COPY OF MIDDLE ELEMENTS : " + Arrays.toString(copySeasons));
     }
 }
