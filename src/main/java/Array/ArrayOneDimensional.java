@@ -47,7 +47,7 @@ public class ArrayOneDimensional {
         }
 
         //INITIALISATION OF TWO-DIMENSIONAL ARRAY
-        int[][] twoDimensionalArray = new int [8][8];
+        int[][] twoDimensionalArray = new int [8][8]; //[1st] - row [2nd] - number of cell
         for(int m = 0; m < 7 ; m++){
             for(int n = 0; n <7; n++) {
                 twoDimensionalArray[m][n] = m*n + 1;
@@ -72,6 +72,8 @@ public class ArrayOneDimensional {
             }
             System.out.println();
         }
+        // ALSO PRINT TWO-SIDED ARRAY
+        System.out.println("2nd type of the printing : " + Arrays.deepToString(anotherTwoDimensionalArray1));
         //FIND SOME ELEMENT IN THE ARRAY
         int K = Arrays.binarySearch(month,1,3,"March");
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + K + " VALUE UNDER THIS INDEX IS = " + month[K]);
@@ -95,5 +97,10 @@ public class ArrayOneDimensional {
         //COPY OF SOME ELEMENTS (MIDDLE ELEMENS)
         copySeasons = Arrays.copyOfRange(seasons,0,2);
         System.out.println(" COPY OF MIDDLE ELEMENTS : " + Arrays.toString(copySeasons));
+        //ARRAY1.equals(ARRAY2) - compares just links to the objects
+        //Arrays.equals(ARRAY1,ARRAY2) - compares exactly data in the arrays
+
+        //Arrays.deepEquals(ARRAY1,ARRAY2) - comparing of two-dimensional arrays
+
     }
 }
