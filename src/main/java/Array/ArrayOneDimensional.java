@@ -29,7 +29,7 @@ public class ArrayOneDimensional {
 
         //LENGTH
         int[] myArray = new int[10]; // - create array of the ints for 10 elements and assigned name for it myArray
-        System.out.println(myArray.length); // show length of the array to the screen
+        System.out.println("myArray length = " + myArray.length); // show length of the array to the screen
 
         //INITIALISATION AND ACCESS
         String[] seasons = new String[4]; //initialisation
@@ -72,6 +72,8 @@ public class ArrayOneDimensional {
             }
             System.out.println();
         }
+        System.out.println("anotherTwoDimensionalArray1 length rows = " + anotherTwoDimensionalArray1.length);
+        System.out.println("anotherTwoDimensionalArray1 length columns = " + anotherTwoDimensionalArray1[0].length);
         // ALSO PRINT TWO-SIDED ARRAY
         System.out.println("2nd type of the printing : " + Arrays.deepToString(anotherTwoDimensionalArray1));
         //FIND SOME ELEMENT IN THE ARRAY
