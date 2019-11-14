@@ -1,11 +1,12 @@
 package Array;
 
+import org.apache.commons.lang3.ArrayUtils;
+
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
-public class ArrayOneDimensional {
-    public static void main (String[] args)
-
-    {
+public class ArraysExamples {
+    public static void main (String[] args) {
         //DECLARATION
         //dataType[] arrayName; - in such way should be declared array
         //int[] myArray; - example for any type
@@ -39,54 +40,54 @@ public class ArrayOneDimensional {
         seasons[3] = "Autumn";
 
         //INITIALISATION AND SETTING VALUES IN THE CELLS
-        String[] month = new String[]{"January","February","March","April","May"};
-        String[] days = {"Monday","Tuesday","Wednesday"};
+        String[] month = new String[]{"January", "February", "March", "April", "May"};
+        String[] days = {"Monday", "Tuesday", "Wednesday"};
 
-        for(int i=0;i<4;i++) {
+        for (int i = 0; i < 4; i++) {
             System.out.println(month[i]);
         }
 
         //INITIALISATION OF TWO-DIMENSIONAL ARRAY
-        int[][] twoDimensionalArray = new int [8][8]; //[1st] - row [2nd] - number of cell
-        for(int m = 0; m < 7 ; m++){
-            for(int n = 0; n <7; n++) {
-                twoDimensionalArray[m][n] = m*n + 1;
+        int[][] twoDimensionalArray = new int[8][8]; //[1st] - row [2nd] - number of cell
+        for (int m = 0; m < 7; m++) {
+            for (int n = 0; n < 7; n++) {
+                twoDimensionalArray[m][n] = m * n + 1;
             }
         }
-        for(int m=0;m<7;m++){
-            for(int n=0; n < 7; n++){
+        for (int m = 0; m < 7; m++) {
+            for (int n = 0; n < 7; n++) {
                 System.out.print(twoDimensionalArray[m][n] + " ");
             }
             System.out.println();
         }
         //2nd
-        int[][]anotherTwoDimensionalArray = new int[2][2];
+        int[][] anotherTwoDimensionalArray = new int[2][2];
         int[][] anotherTwoDimensionalArray1 = {
-                {1,2,3},
-                {4,5,6},
-                {9,8,7}
+                {1, 2, 3},
+                {4, 5, 6},
+                {9, 8, 7}
         };
-        for(int m=0;m<3;m++){
-            for(int n=0; n < 3; n++){
+        for (int m = 0; m < 3; m++) {
+            for (int n = 0; n < 3; n++) {
                 System.out.print(anotherTwoDimensionalArray1[m][n] + " ");
             }
             System.out.println();
         }
         System.out.println("anotherTwoDimensionalArray1 length rows = " + anotherTwoDimensionalArray1.length);
         System.out.println("anotherTwoDimensionalArray1 length columns = " + anotherTwoDimensionalArray1[0].length);
-        // ALSO PRINT TWO-SIDED ARRAY
+        // ALSO PRINT TWO-DIMENSIONAL ARRAY
         System.out.println("2nd type of the printing : " + Arrays.deepToString(anotherTwoDimensionalArray1));
         //FIND SOME ELEMENT IN THE ARRAY
-        int K = Arrays.binarySearch(month,1,3,"March");
+        int K = Arrays.binarySearch(month, 1, 3, "March");
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + K + " VALUE UNDER THIS INDEX IS = " + month[K]);
 
-        int E = Arrays.binarySearch(anotherTwoDimensionalArray1[0],2);
+        int E = Arrays.binarySearch(anotherTwoDimensionalArray1[0], 2);
+        Arrays.sort(anotherTwoDimensionalArray1[2], 0, 2);
+        System.out.println("SORTED ARRAY : ");
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + E + " VALUE UNDER THIS INDEX IS = " + anotherTwoDimensionalArray1[0][E]);
         //SORT (Arrays.sort())
-        Arrays.sort(anotherTwoDimensionalArray1[2],0,2);
-        System.out.println("SORTED ARRAY : ");
-        for(int m=0;m<3;m++){
-            for(int n=0; n < 3; n++){
+        for (int m = 0; m < 3; m++) {
+            for (int n = 0; n < 3; n++) {
                 System.out.print(anotherTwoDimensionalArray1[m][n] + " ");
             }
             System.out.println();
@@ -94,15 +95,31 @@ public class ArrayOneDimensional {
         //ARRAY TO STRING
         System.out.println("ARRAY TO STRING : " + Arrays.toString(anotherTwoDimensionalArray1[1]));
         //COPY OF SOME ELEMENTS (JUST FIRST ELEMENS)
-        String[] copySeasons = Arrays.copyOf(seasons,2);
+        String[] copySeasons = Arrays.copyOf(seasons, 2);
         System.out.println(" COPY OF SOME ELEMENTS : " + Arrays.toString(copySeasons));
         //COPY OF SOME ELEMENTS (MIDDLE ELEMENS)
-        copySeasons = Arrays.copyOfRange(seasons,0,2);
+        copySeasons = Arrays.copyOfRange(seasons, 0, 2);
         System.out.println(" COPY OF MIDDLE ELEMENTS : " + Arrays.toString(copySeasons));
         //ARRAY1.equals(ARRAY2) - compares just links to the objects
         //Arrays.equals(ARRAY1,ARRAY2) - compares exactly data in the arrays
 
         //Arrays.deepEquals(ARRAY1,ARRAY2) - comparing of two-dimensional arrays
+        int twoDimArray[][] = {{1, 2, 3}, {1, 2}, {1}};
+        for (int i = 0; i < 3; i++) {
+            System.out.println("twoDimArray = " + Arrays.toString(twoDimArray[i]));
+        }
+        System.out.println(Arrays.deepToString(twoDimArray));
+
+        String[] stringArray = {"a", "b", "c", "d", "e"};
+        boolean b = Arrays.asList(stringArray).contains("a"); //check presence of the some element
+        System.out.println(b); //TRUE-FALSE(boolean)
+
+        int[] intArray = { 1, 2, 3, 4, 5 };
+        int[] intArray2 = { 6, 7, 8, 9, 10 };
+        // Apache Commons Lang library
+        int[] combinedIntArray = ArrayUtils.addAll(intArray, intArray2); //Array1+Array2 and SORT
+        System.out.println("combinedIntArray" + Arrays.toString(combinedIntArray));
+
 
     }
 }
