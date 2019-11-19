@@ -1,8 +1,7 @@
-package Array;
+package List.ArrayList;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class ArraysExamples {
