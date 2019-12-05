@@ -25,6 +25,11 @@ public class HashMapExamples {
         passportsAndNames.remove(2);
         System.out.println("HashMap after removing : " + passportsAndNames);
 
+        //CONTAINS KEY
+        System.out.println("Contains KEY = 111 : " + passportsAndNames.containsKey(111));
+
+        //CONTAINS VALUE
+        System.out.println("Contains VALUE = Text1 : " + passportsAndNames.containsValue("Text1"));
     }
 
 }
