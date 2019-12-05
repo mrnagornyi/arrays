@@ -1,4 +1,4 @@
-package List.ArrayList;
+package List.Array;
 
 import org.apache.commons.lang3.ArrayUtils;
 
@@ -75,13 +75,13 @@ public class ArraysExamples {
         System.out.println("anotherTwoDimensionalArray1 length rows = " + anotherTwoDimensionalArray1.length);
         System.out.println("anotherTwoDimensionalArray1 length columns = " + anotherTwoDimensionalArray1[0].length);
         // ALSO PRINT TWO-DIMENSIONAL ARRAY
-        System.out.println("2nd type of the printing : " + Arrays.deepToString(anotherTwoDimensionalArray1));
+        System.out.println("2nd type of the printing : " + java.util.Arrays.deepToString(anotherTwoDimensionalArray1));
         //FIND SOME ELEMENT IN THE ARRAY
-        int K = Arrays.binarySearch(month, 1, 3, "March");
+        int K = java.util.Arrays.binarySearch(month, 1, 3, "March");
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + K + " VALUE UNDER THIS INDEX IS = " + month[K]);
 
-        int E = Arrays.binarySearch(anotherTwoDimensionalArray1[0], 2);
-        Arrays.sort(anotherTwoDimensionalArray1[2], 0, 2);
+        int E = java.util.Arrays.binarySearch(anotherTwoDimensionalArray1[0], 2);
+        java.util.Arrays.sort(anotherTwoDimensionalArray1[2], 0, 2);
         System.out.println("SORTED ARRAY : ");
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + E + " VALUE UNDER THIS INDEX IS = " + anotherTwoDimensionalArray1[0][E]);
         //SORT (Arrays.sort())
@@ -92,32 +92,32 @@ public class ArraysExamples {
             System.out.println();
         }
         //ARRAY TO STRING
-        System.out.println("ARRAY TO STRING : " + Arrays.toString(anotherTwoDimensionalArray1[1]));
+        System.out.println("ARRAY TO STRING : " + java.util.Arrays.toString(anotherTwoDimensionalArray1[1]));
         //COPY OF SOME ELEMENTS (JUST FIRST ELEMENS)
-        String[] copySeasons = Arrays.copyOf(seasons, 2);
-        System.out.println(" COPY OF SOME ELEMENTS : " + Arrays.toString(copySeasons));
+        String[] copySeasons = java.util.Arrays.copyOf(seasons, 2);
+        System.out.println(" COPY OF SOME ELEMENTS : " + java.util.Arrays.toString(copySeasons));
         //COPY OF SOME ELEMENTS (MIDDLE ELEMENS)
-        copySeasons = Arrays.copyOfRange(seasons, 0, 2);
-        System.out.println(" COPY OF MIDDLE ELEMENTS : " + Arrays.toString(copySeasons));
+        copySeasons = java.util.Arrays.copyOfRange(seasons, 0, 2);
+        System.out.println(" COPY OF MIDDLE ELEMENTS : " + java.util.Arrays.toString(copySeasons));
         //ARRAY1.equals(ARRAY2) - compares just links to the objects
         //Arrays.equals(ARRAY1,ARRAY2) - compares exactly data in the arrays
 
         //Arrays.deepEquals(ARRAY1,ARRAY2) - comparing of two-dimensional arrays
         int twoDimArray[][] = {{1, 2, 3}, {1, 2}, {1}};
         for (int i = 0; i < 3; i++) {
-            System.out.println("twoDimArray = " + Arrays.toString(twoDimArray[i]));
+            System.out.println("twoDimArray = " + java.util.Arrays.toString(twoDimArray[i]));
         }
-        System.out.println(Arrays.deepToString(twoDimArray));
+        System.out.println(java.util.Arrays.deepToString(twoDimArray));
 
         String[] stringArray = {"a", "b", "c", "d", "e"};
-        boolean b = Arrays.asList(stringArray).contains("a"); //check presence of the some element
+        boolean b = java.util.Arrays.asList(stringArray).contains("a"); //check presence of the some element
         System.out.println(b); //TRUE-FALSE(boolean)
 
         int[] intArray = { 1, 2, 3, 4, 5 };
         int[] intArray2 = { 6, 7, 8, 9, 10 };
         // Apache Commons Lang library
         int[] combinedIntArray = ArrayUtils.addAll(intArray, intArray2); //Array1+Array2 and SORT
-        System.out.println("combinedIntArray" + Arrays.toString(combinedIntArray));
+        System.out.println("combinedIntArray" + java.util.Arrays.toString(combinedIntArray));
 
 
     }
