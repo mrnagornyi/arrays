@@ -129,6 +129,6 @@ public class ArraysExamples {
         int[] intArray2 = { 6, 7, 8, 9, 10 };
         int[] combinedIntArray = ArrayUtils.addAll(intArray, intArray2); //Array1+Array2 and SORT
         System.out.println("combinedIntArray" + java.util.Arrays.toString(combinedIntArray));
-        
+
     }
 }
