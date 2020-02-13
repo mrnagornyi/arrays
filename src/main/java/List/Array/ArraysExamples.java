@@ -7,7 +7,8 @@ import java.util.Arrays;
 
 public class ArraysExamples {
     public static void main (String[] args) {
-        //DECLARATION
+        //___________________________________________________________________________________________________DECLARATION
+
         //dataType[] arrayName; - in such way should be declared array
         //int[] myArray; - example for any type
         //Object[] arrayOfObjects; - example for Objects
@@ -17,33 +18,40 @@ public class ArraysExamples {
         //int myArray[]; - C++ example for any type
         //Object arrayOfObjects[]; - C++ example for Objects
 
-        //CREATE ARRAY IN THE MEMORY
+        //____________________________________________________________________________________CREATE ARRAY IN THE MEMORY
+
         //new typeOfArray[length]; - reservation of the place in the memory for array
         //new int[10]; // example of declaring of the array
         //myArray = new int[10]; // creation and reservation of the memory for 10 elements
 
-        //DECLARE AND CREATE ARRAY IN ONE TIME
+        //__________________________________________________________________________DECLARE AND CREATE ARRAY IN ONE TIME
+
         //int[]myArray = new int[10];
 
-        //INDEXING
+        //______________________________________________________________________________________________________INDEXING
+
         //10 elements coming from 0,1,2,3,4...8 till 9
 
-        //LENGTH
+        //________________________________________________________________________________________________________LENGTH
+
         int[] myArray = new int[10]; // - create array of the ints for 10 elements and assigned name for it myArray
         System.out.println("myArray length = " + myArray.length); // show length of the array to the screen
 
-        //INITIALISATION AND ACCESS
+        //_____________________________________________________________________________________INITIALISATION AND ACCESS
+
         String[] seasons = new String[4]; //initialisation
         seasons[0] = "Winter"; //write exactly some value to the cell
         seasons[1] = "Spring";
         seasons[2] = "Summer";
         seasons[3] = "Autumn";
 
-        //INITIALISATION AND SETTING VALUES IN THE CELLS
+        //________________________________________________________________INITIALISATION AND SETTING VALUES IN THE CELLS
+
         String[] month = new String[]{"January", "February", "March", "April", "May"};
         String[] days = {"Monday", "Tuesday", "Wednesday"};
 
-        //SHOW ARRAY ON THE SCREEN______________________________________________________________________________________
+        //______________________________________________________________________________________SHOW ARRAY ON THE SCREEN
+
         for (int i = 0; i < 4; i++) {
             System.out.println(month[i]);
         }
@@ -52,7 +60,8 @@ public class ArraysExamples {
         System.out.println(month); // There non visual elements. Just code
         System.out.println(stringmonth);
 
-        //INITIALISATION OF TWO-DIMENSIONAL ARRAY
+        //_______________________________________________________________________INITIALISATION OF TWO-DIMENSIONAL ARRAY
+
         int[][] twoDimensionalArray = new int[8][8]; //[1st] - row [2nd] - number of cell
         for (int m = 0; m < 7; m++) {
             for (int n = 0; n < 7; n++) {
@@ -65,7 +74,9 @@ public class ArraysExamples {
             }
             System.out.println();
         }
-        //2nd
+
+        //___________________________________________________________________________________________________________2nd
+
         int[][] anotherTwoDimensionalArray = new int[2][2];
         int[][] anotherTwoDimensionalArray1 = {
                 {1, 2, 3},
@@ -81,10 +92,12 @@ public class ArraysExamples {
         System.out.println("anotherTwoDimensionalArray1 length rows = " + anotherTwoDimensionalArray1.length);
         System.out.println("anotherTwoDimensionalArray1 length columns = " + anotherTwoDimensionalArray1[0].length);
 
-        // ALSO PRINT TWO-DIMENSIONAL ARRAY
+        //______________________________________________________________________________ALSO PRINT TWO-DIMENSIONAL ARRAY
+
         System.out.println("2nd type of the printing : " + java.util.Arrays.deepToString(anotherTwoDimensionalArray1));
 
-        //FIND SOME ELEMENT IN THE ARRAY
+        //________________________________________________________________________________FIND SOME ELEMENT IN THE ARRAY
+
         int K = java.util.Arrays.binarySearch(month, 1, 3, "March");
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + K + " VALUE UNDER THIS INDEX IS = " + month[K]);
 
@@ -93,7 +106,8 @@ public class ArraysExamples {
         System.out.println("SORTED ARRAY : ");
         System.out.println("INDEX OF THE SOME ELEMENT IN THE ARRAY = " + E + " VALUE UNDER THIS INDEX IS = " + anotherTwoDimensionalArray1[0][E]);
 
-        //SORTED (Arrays.sort())
+        //________________________________________________________________________________________SORTED (Arrays.sort())
+        
         for (int m = 0; m < 3; m++) {
             for (int n = 0; n < 3; n++) {
                 System.out.print(anotherTwoDimensionalArray1[m][n] + " ");
