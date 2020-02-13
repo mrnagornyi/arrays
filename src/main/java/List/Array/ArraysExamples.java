@@ -49,7 +49,7 @@ public class ArraysExamples {
         }
 
         String stringmonth = Arrays.toString(month);
-        System.out.println(month); // There non visual elemements. Just code
+        System.out.println(month); // There non visual elements. Just code
         System.out.println(stringmonth);
 
         //INITIALISATION OF TWO-DIMENSIONAL ARRAY
