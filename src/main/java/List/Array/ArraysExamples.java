@@ -2,6 +2,7 @@ package List.Array;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class ArraysExamples {
@@ -42,9 +43,14 @@ public class ArraysExamples {
         String[] month = new String[]{"January", "February", "March", "April", "May"};
         String[] days = {"Monday", "Tuesday", "Wednesday"};
 
+        //SHOW ARRAY ON THE SCREEN______________________________________________________________________________________
         for (int i = 0; i < 4; i++) {
             System.out.println(month[i]);
         }
+
+        String stringmonth = Arrays.toString(month);
+        System.out.println(month); // There non visual elemements. Just code
+        System.out.println(stringmonth);
 
         //INITIALISATION OF TWO-DIMENSIONAL ARRAY
         int[][] twoDimensionalArray = new int[8][8]; //[1st] - row [2nd] - number of cell
@@ -129,6 +135,8 @@ public class ArraysExamples {
         int[] intArray2 = { 6, 7, 8, 9, 10 };
         int[] combinedIntArray = ArrayUtils.addAll(intArray, intArray2); //Array1+Array2 and SORT
         System.out.println("combinedIntArray" + java.util.Arrays.toString(combinedIntArray));
+
+
 
     }
 }
